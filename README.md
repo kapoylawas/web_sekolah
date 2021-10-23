@@ -1,4 +1,4 @@
-## LARASCHOOL V 1.0.0
+## web_sekolah V 1.0.0
 <p><b>
 laravel 8
 </b></p>
@@ -16,8 +16,8 @@ Lalu ketik command dibawah ini
 - php artisan db:seed 
 
 ## Login
-Email : rahmat@example.com
-Password : password
+Email : admin@gmail.com
+Password : rahasia
 
 ## Fitur
 # Front / Depan
