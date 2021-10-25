@@ -56,14 +56,139 @@
             font-size: 18px;
         }
     }
+
+    /* The actual timeline (the vertical ruler) */
+		.timeline {
+		  position: relative;
+		  max-width: 1200px;
+		  margin: 0 auto;
+		}
+
+		/* The actual timeline (the vertical ruler) */
+		.timeline::after {
+		  content: '';
+		  position: absolute;
+		  width: 6px;
+		  background-color: #AB5CAF;
+		  top: 0;
+		  bottom: 0;
+		  left: 50%;
+		  margin-left: -3px;
+		}
+
+		/* Container around content */
+		.wadah {
+		  padding: 10px 40px;
+		  position: relative;
+		  background-color: inherit;
+		  width: 50%;
+		}
+
+		/* The circles on the timeline */
+		.wadah::after {
+		  content: '';
+		  position: absolute;
+		  width: 25px;
+		  height: 25px;
+		  right: -17px;
+		  background-color: white;
+		  border: 4px solid #FF9F55;
+		  top: 15px;
+		  border-radius: 50%;
+		  z-index: 1;
+		}
+
+		/* Place the container to the left */
+		.left {
+		  left: 0;
+		}
+
+		/* Place the container to the right */
+		.right {
+		  left: 50%;
+		}
+
+		/* Add arrows to the left container (pointing right) */
+		.left::before {
+		  content: " ";
+		  height: 0;
+		  position: absolute;
+		  top: 22px;
+		  width: 0;
+		  z-index: 1;
+		  right: 30px;
+		  border: medium solid #33015A;
+		  border-width: 10px 0 10px 10px;
+		  border-color: transparent transparent transparent #33015A;
+		}
+
+		/* Add arrows to the right container (pointing left) */
+		.right::before {
+		  content: " ";
+		  height: 0;
+		  position: absolute;
+		  top: 22px;
+		  width: 0;
+		  z-index: 1;
+		  left: 30px;
+		  border: medium solid #33015A;
+		  border-width: 10px 10px 10px 0;
+		  border-color: transparent #33015A transparent transparent;
+		}
+
+		/* Fix the circle for containers on the right side */
+		.right::after {
+		  left: -16px;
+		}
+
+		/* The actual content */
+		.content {
+		  padding: 20px 30px;
+		  position: relative;
+		  border-radius: 6px;
+		}
+
+		/* Media queries - Responsive timeline on screens less than 600px wide */
+		@media screen and (max-width: 600px) {
+		  /* Place the timelime to the left */
+		  .timeline::after {
+		  left: 31px;
+		  }
+		  
+		  /* Full-width containers */
+		  .wadah {
+		  width: 100%;
+		  padding-left: 70px;
+		  padding-right: 25px;
+		  }
+		  
+		  /* Make sure that all arrows are pointing leftwards */
+		  .wadah::before {
+		  left: 60px;
+		  border: medium solid #33015A;
+		  border-width: 10px 10px 10px 0;
+		  border-color: transparent #33015A transparent transparent;
+		  }
+
+		  /* Make sure all circles are at the same spot */
+		  .left::after, .right::after {
+		  left: 15px;
+		  }
+		  
+		  /* Make all right containers behave like the left ones */
+		  .right {
+		  left: 0%;
+		  }
+		}
 </style>
 <!-- ##### Hero Area Start ##### -->
 <div class="mb-0 jumbotron d-flex justify-content-center align-items-center">
     <div class="p-3 rounded shadow-sm bg-white-50">
         <div class="p-4 text-center border card">
-            <h1 class="display-4 font-weight-bold">Lara Schoool Terbaik</h1>
-            <p class="mt-3 lead text-capitalize">Untuk Menuju Sekolah Yang Baik</p>
-            <a href="" class="m-auto rounded btn btn-primary btn-lg w-50">Sekolah Sekarang</a>
+            <h1 class="display-5 font-weight-bold">SMP 5 HANGTUA</h1>
+            <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+            {{-- <p class="mt-3 lead text-capitalize">Untuk Menuju Sekolah Yang Baik</p> --}}
+            <a href="" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
         </div>
     </div>
 </div>
@@ -223,16 +348,78 @@
 </section>
 @endif --}}
 
+<!-- Peta Jalan -->
+<div class="container" style="padding-top: 5rem; padding-bottom: 4rem;">
+    <div align="center" style="padding-bottom: 4rem;">
+        <h2 style="color: #33015A"><b>Visi Misi</b> SMP HANGTUA 5 SIDOARJO</h2>
+        <hr>
+    </div>
+    <div class="timeline">
+      <div class="wadah left">
+        <div class="content" style="background-color: #F78320; color: #FFFFFF">
+          <i class="fas fa-city fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>1. Pembangunan Data Center</b></h5>
+          <p>Pembangunan ruang data center (dimana nantinya akan menjadi pusat data seluruh SKPD/unit di Kabupaten) yang sesuai memenuhi syarat, seperti diletakkan pada lokasi yang tidak rawan bencana dan dibangun berdasarkan standar tier yang ada, dsb.</p>
+        </div>
+      </div>
+      <div class="wadah right">
+        <div class="content" style="background-color: #42B745; color: #FFFFFF">
+          <i class="fas fa-desktop fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>2. Pengadaan Perangkat Aktif pada Data Center</b></h5>
+          <p>Pengadaan perangkat aktif yang dibutuhkan untuk mendukung pengadaan data center, seperti server, switch, router, pc personal, dsb.</p>
+        </div>
+      </div>
+      <div class="wadah left">
+        <div class="content" style="background-color: #008DD1; color: #FFFFFF">
+          <i class="fas fa-network-wired fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>3. Pembangunan Jaringan FO SKPD, Kec, Desa</b></h5>
+          <p>Pembangunan infrastruktur jaringan Fiber Optik untuk menghubungkan SKPD- SKPD yang ada dengan Data Center untuk sentralisasi TIK dan data.</p>
+        </div>
+      </div>
+      <div class="wadah right">
+        <div class="content" style="background-color: #F54C8F; color: #FFFFFF">
+          <i class="fas fa-users fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>4. Pembangunan Command Center</b></h5>
+          <p>Pembangunan command center sebagai pusat control yang akan terintegrasi dengan Aplikasi dan Dashboard pemerintahan.</p>
+        </div>
+      </div>
+      <div class="wadah left">
+        <div class="content" style="background-color: #AA66B1; color: #FFFFFF">
+          <i class="fas fa-columns fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>5. Inventarisasi Aplikasi & Pembuatan Dashboard Aplikasi Internal</b></h5>
+          <p>Penginventarisasian aplikasi yang sudah ada atau perlu diadakan baik pada PEMKAB  dan SKPD/unit yang ada pada  Kabupaten yang perlu diintegrasikan dengan Data Center. Pembuatan dashboard untuk big data aplikasi internal yang sudah berjalan atau running pada Data Center untuk memudahkan decision maker dalam proses monitoring dan pengambilan keputusan.</p>
+        </div>
+      </div>
+      <div class="wadah right">
+        <div class="content" style="background-color: #FE2826; color: #FFFFFF;">
+          <i class="fas fa-photo-video fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>6. Pembuatan Dashboard Media Eksternal</b></h5>
+          <p>Pembuatan dashboard untuk big data media eksternal terkait performansi Pemerintah Kabupaten beserta SKPD/unitnya (seperti opini yang beredar pada media sosial facebook atau twitter terkait performansi kinerja Pemerintah Kabupaten) untuk memudahkan decision maker dalam proses monitoring dan pengambilan keputusan.</p>
+        </div>
+      </div>
+      <div class="wadah left">
+        <div class="content" style="background-color: #2297A1; color: #FFFFFF">
+          <i class="fas fa-mobile-alt fa-2x" style="margin-bottom: 10px;"></i>
+          <h5><b>7. Pembuatan Mobile Application</b></h5>
+          <p>Pembuatan aplikasi mobile disesuaikan dengan kebutuhan Pemerintah Kabupaten guna memudahkan decision maker untuk memantau kinerja terkait performansi Pemerintah Kabupaten (misal : pembuatan aplikasi mobile untuk dashboard big data aplikasi internal).</p>
+        </div>
+      </div>
+    </div>
+</div>
+</div>
+
 <div class="bg-white galang-dana2">
     <div class="container py-5">
         <div class="row">
             <div class="text-center col-lg-12">
-                <h2 class="mb-4 fa-3x">SMP HANG TUAH</h2>
-                <h3 class="mb-4 font-weight-normal">
+                <h2 class="mb-4 fa-3x">SMP 5 HANGTUAH SIDOARJO</h2>
+                {{-- <h3 class="mb-4 font-weight-normal">
                     Selamat Datang di Website SMP HANG TUAH 5 CANDI SIDOARJO. Terima Kasih Kunjungannya <br>
                     Terima Kasih Kunjungannya
-                </h3>
-                <a href="" class="m-auto rounded btn btn-primary btn-lg">Testing</a>
+                </h3> --}}
+                <iframe width="660" height="350" src="https://www.youtube.com/embed/Nu6AQaDI7U4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+                <a href="https://www.youtube.com/channel/UCqSOncP3AH1ly53vc1uS4nQ" class="m-auto rounded btn btn-primary btn-lg"><i class="mr-2 fab fa-youtube"></i>Youtube</a>
             </div>
         </div>
     </div>

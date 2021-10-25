@@ -60,7 +60,7 @@
         }
 
         .navbar-brand img {
-            width: 170px;
+            width: 30px;
             position: absolute;
             top: 4px;
         }
@@ -232,8 +232,8 @@
                     Sidoarjo, Jawa Timur
                 </p>
                 <p class="text-white-80 text-decoration-none mb-1"><i class="mr-2 fas fa-phone-alt"></i> 0813-0394-2343</p>
-                <p class="text-white-80 text-decoration-none mb-1"><i class="mr-2 fas fa-envelope"></i> support@w2charity.com</p>
-                <p class="text-white-80 text-decoration-none mb-1"><i class="mr-2 fas fa-globe"></i> www.w2charity.com</p>
+                <p class="text-white-80 text-decoration-none mb-1"><i class="mr-2 fas fa-envelope"></i> info@smpht5sidoarjo.sch.id </p>
+                <p class="text-white-80 text-decoration-none mb-1"><i class="mr-2 fas fa-globe"></i> http://www.smpht5sidoarjo.sch.id</p>
             </div>
             <div class="col-lg-3 text-white-80">
                 <h5 class="mb-2 mb-lg-4">Testing</h5>

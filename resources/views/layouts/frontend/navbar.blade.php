@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
-    <style>
+    {{-- <style>
         body {
             font-family: 'Roboto', sans-serif;
             font-size: 1rem;
@@ -63,7 +63,7 @@
         }
 
         .navbar-brand img {
-            width: 170px;
+            width: 30px;
             position: absolute;
             top: 4px;
         }
@@ -219,7 +219,7 @@
                 top: 7.5px;
             }
         }
-    </style>
+    </style> --}}
 
     @stack('css')
 </head>
@@ -232,7 +232,7 @@
     <nav class="bg-white navbar navbar-expand-sm sticky-top navbar-light border-bottom" style="top: -1px;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('/img/logo.png') }}" alt="">
+                <img src="{{ asset('/img/icons/smp.jpeg') }}" alt="" class="navbar-brand img">
             </a>
             <button class="navbar-toggler first-load" type="button" data-toggle="collapse" data-target="#navbar1"
                 aria-controls="navbar1" aria-expanded="false" aria-label="Toggle navigation">
