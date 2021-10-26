@@ -188,7 +188,7 @@
             <h1 class="display-5 font-weight-bold">SMP 5 HANGTUA</h1>
             <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
             {{-- <p class="mt-3 lead text-capitalize">Untuk Menuju Sekolah Yang Baik</p> --}}
-            <a href="" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+            <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
         </div>
     </div>
 </div>

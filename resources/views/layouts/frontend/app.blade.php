@@ -247,8 +247,8 @@
                     </a>
                 </div>
                 <div class="col-ml-5 action" style="white-space: nowrap;">
-                    <a href="" class="py-0 btn btn-sm btn-light rounded-0">PPDB</a>
-                    <a href="http://web.test/login" class="py-0 btn btn-sm btn-light rounded-0">Admin</a>
+                    <a href="{{ url('/ppdb') }}" class="py-0 btn btn-sm btn-light rounded-0">PPDB</a>
+                    <a href="{{ url('/login') }}" class="py-0 btn btn-sm btn-light rounded-0">Admin</a>
                 </div>
             </div>
         </div>
