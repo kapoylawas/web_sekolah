@@ -18,6 +18,7 @@
         <div class="card-body">
         <form method="POST" enctype="multipart/form-data" action="{{ route('admin.artikel.update',$artikel->id) }}">
             @csrf
+            @method('PUT')
             <div class="form-group">
                 <label for="judul">Judul Artikel</label>
                 <input value="{{ $artikel->judul }}" required="" type="" name="judul" placeholder="" class="form-control"> 
@@ -33,7 +34,7 @@
                     <div class="form-group">
                         <label>Kategori</label>
                         <select required="" class="form-control" name="kategori_artikel_id">
-                        <option selected="" disabled="">- PILIH KATEGORI -</option>
+                        <option value="{{ $artikel->kategori_artikel_id }}">{{ $artikel->kategoriArtikel->nama_kategori }}</option>
                         @foreach($kategoriArtikel as $kategori)
                             <option value="{{ $kategori->id }}">{{ $kategori->nama_kategori }}</option>
                         @endforeach

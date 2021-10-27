@@ -9,6 +9,19 @@
             font-size: 18px;
         }
     }
+    .google-maps {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
 </style>
 <section class="contact-area">
     <div class="container">
@@ -173,11 +186,14 @@
                     </form>
                 </div>
             </div>
+            <div class="google-maps">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.8801651585873!2d112.69723911424977!3d-7.478483094605356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e0db9fce31c7%3A0x928ca6bd5a39d601!2sSMP%20Hang%20Tuah%205%20Candi%20Sidoarjo!5e0!3m2!1sen!2sid!4v1634877661569!5m2!1sen!2sid"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
         </div>
     </div>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.8801651585873!2d112.69723911424977!3d-7.478483094605356!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7e0db9fce31c7%3A0x928ca6bd5a39d601!2sSMP%20Hang%20Tuah%205%20Candi%20Sidoarjo!5e0!3m2!1sen!2sid!4v1634877661569!5m2!1sen!2sid"
-        width="1420" height="500" style="border:0;" allowfullscreen="" loading="lazy">
-    </iframe>
+    
 </section>
 @stop

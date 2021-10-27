@@ -19,15 +19,14 @@
                 <div class="col-md-6 mb-3">
                     <div class="card">
                         <div class="card-header">
-                            {{ $art->judul }}
-
+                            {{ Str::substr($art->judul, 0, 49) }}
                             <span class="badge badge-danger float-right">by : {{ $art->user->name }}</span>
                         </div>
                         <div class="card-body">
-                            <img src="{{ asset('uploads/img/artikel/'.$art->thumbnail) }}" width="100%" style="height: 300px; object-fit: cover; object-position: center;">
+                            <img src="{{ asset('uploads/img/artikel/'.$art->thumbnail) }}" width="100%" style="height: 200px; object-fit: cover; object-position: center;">
 
                             <div class="card-text mt-3">
-                                {!! Str::limit($art->deskripsi) !!}
+                                <small>{{ date('d / m / Y', strtotime($art->created_at)) }}</small>
                             </div>
 
                             <a href="{{ route('artikel.show',$art->slug) }}" class="btn btn-primary btn-sm">Selengkapnya</a>

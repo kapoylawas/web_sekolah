@@ -10,22 +10,27 @@ class ArtikelController extends Controller
 {
     public function index()
     {
-    	$artikel = Artikel::with(['user','kategoriArtikel'])->latest()->paginate(4);
-    	return view('artikel.index',compact('artikel'));
+        $artikel = Artikel::with(['user','kategoriArtikel'])->latest()->paginate(4);
+        return view('artikel.index',compact('artikel'));
     }
 
     public function show(Artikel $artikel)
     {
-    	return view('artikel.show',compact('artikel'));
+        return view('artikel.show',compact('artikel'));
     }
 
     public function search(Request $request)
     {	
-    	$artikel = Artikel::with(['user','kategoriArtikel'])->where(function($query) use ($request){
-    		$query->where('judul','like','%'.$request->keyword.'%')
+        $artikel = Artikel::with(['user','kategoriArtikel'])->where(function($query) use ($request){
+            $query->where('judul','like','%'.$request->keyword.'%')
             ->orWhere('deskripsi','like','%'.$request->keyword.'%');
-    	})->paginate(4);
+        })->paginate(4);
 
-    	return view('artikel.index',compact('artikel'));
+        return view('artikel.index',compact('artikel'));
+    }
+
+    public function all(){
+        $artikel = Artikel::get();
+        return view('artikel.all', compact('artikel'));
     }
 }

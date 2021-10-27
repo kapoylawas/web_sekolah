@@ -224,35 +224,35 @@
 
         <!-- Top Header Area -->
         <div class="py-2 text-white header bg-primary">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-lg-3 social">
-                    <a href="" class="text-white"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="" class="ml-4 text-white"><i class="fab fa-twitter"></i></a>
-                    <a href="" class="ml-4 text-white"><i class="fab fa-google"></i></a>
-                    <a href="" class="ml-4 text-white"><i class="fab fa-facebook-f"></i></a>
-                </div>
-                <div class="text-center col-lg-7 office-info">
-                    <a href="" class="text-white text-decoration-none">
-                        <i class="fas fa-phone-alt"></i>
-                        <span class="ml-1">0813-0394-2343</span>
-                    </a>
-                    <a href="" class="ml-3 text-white text-decoration-none">
-                        <i class="far fa-clock"></i>
-                        <span class="ml-1">Senin - Jum'at, 08:00 s/d 16:00</span>
-                    </a>
-                    <a href="" class="ml-3 text-white text-decoration-none">
-                        <i class="fa fa-envelope"></i>
-                        <span class="ml-1">info@smpht5sidoarjo.sch.id</span>
-                    </a>
-                </div>
-                <div class="col-ml-5 action" style="white-space: nowrap;">
-                    <a href="{{ url('/ppdb') }}" class="py-0 btn btn-sm btn-light rounded-0">PPDB</a>
-                    <a href="{{ url('/login') }}" class="py-0 btn btn-sm btn-light rounded-0">Admin</a>
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-3 social">
+                        <a href="" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" class="ml-4 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="" class="ml-4 text-white"><i class="fab fa-google"></i></a>
+                        <a href="" class="ml-4 text-white"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="text-center col-lg-7 office-info">
+                        <a href="" class="text-white text-decoration-none">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="ml-1">0813-0394-2343</span>
+                        </a>
+                        <a href="" class="ml-3 text-white text-decoration-none">
+                            <i class="far fa-clock"></i>
+                            <span class="ml-1">Senin - Jum'at, 08:00 s/d 16:00</span>
+                        </a>
+                        <a href="" class="ml-3 text-white text-decoration-none">
+                            <i class="fa fa-envelope"></i>
+                            <span class="ml-1">info@smpht5sidoarjo.sch.id</span>
+                        </a>
+                    </div>
+                    <div class="col-ml-5 action" style="white-space: nowrap;">
+                        <a href="{{ url('/ppdb') }}" class="py-0 btn btn-sm btn-light rounded-0">PPDB</a>
+                        <a href="{{ url('/login') }}" class="py-0 btn btn-sm btn-light rounded-0">Admin</a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
         <!-- Navbar Area -->
         @include('layouts.frontend.navbar')

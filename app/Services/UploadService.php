@@ -14,4 +14,12 @@ class UploadService
 
 		return $filename;
 	}
+	public function bannerUpload($path)
+	{
+		$file = request()->file('file');
+		$filename = $file->getClientOriginalName();
+		$file->move(public_path('img/bg'.$path),$filename);
+
+		return $filename;
+	}
 }

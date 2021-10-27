@@ -58,140 +58,266 @@
     }
 
     /* The actual timeline (the vertical ruler) */
-		.timeline {
-		  position: relative;
-		  max-width: 1200px;
-		  margin: 0 auto;
-		}
+    .timeline {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-		/* The actual timeline (the vertical ruler) */
-		.timeline::after {
-		  content: '';
-		  position: absolute;
-		  width: 6px;
-		  background-color: #AB5CAF;
-		  top: 0;
-		  bottom: 0;
-		  left: 50%;
-		  margin-left: -3px;
-		}
+    /* The actual timeline (the vertical ruler) */
+    .timeline::after {
+        content: '';
+        position: absolute;
+        width: 6px;
+        background-color: #AB5CAF;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -3px;
+    }
 
-		/* Container around content */
-		.wadah {
-		  padding: 10px 40px;
-		  position: relative;
-		  background-color: inherit;
-		  width: 50%;
-		}
+    /* Container around content */
+    .wadah {
+        padding: 10px 40px;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+    }
 
-		/* The circles on the timeline */
-		.wadah::after {
-		  content: '';
-		  position: absolute;
-		  width: 25px;
-		  height: 25px;
-		  right: -17px;
-		  background-color: white;
-		  border: 4px solid #FF9F55;
-		  top: 15px;
-		  border-radius: 50%;
-		  z-index: 1;
-		}
+    /* The circles on the timeline */
+    .wadah::after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        right: -17px;
+        background-color: white;
+        border: 4px solid #FF9F55;
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+    }
 
-		/* Place the container to the left */
-		.left {
-		  left: 0;
-		}
+    /* Place the container to the left */
+    .left {
+        left: 0;
+    }
 
-		/* Place the container to the right */
-		.right {
-		  left: 50%;
-		}
+    /* Place the container to the right */
+    .right {
+        left: 50%;
+    }
 
-		/* Add arrows to the left container (pointing right) */
-		.left::before {
-		  content: " ";
-		  height: 0;
-		  position: absolute;
-		  top: 22px;
-		  width: 0;
-		  z-index: 1;
-		  right: 30px;
-		  border: medium solid #33015A;
-		  border-width: 10px 0 10px 10px;
-		  border-color: transparent transparent transparent #33015A;
-		}
+    /* Add arrows to the left container (pointing right) */
+    .left::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        right: 30px;
+        border: medium solid #33015A;
+        border-width: 10px 0 10px 10px;
+        border-color: transparent transparent transparent #33015A;
+    }
 
-		/* Add arrows to the right container (pointing left) */
-		.right::before {
-		  content: " ";
-		  height: 0;
-		  position: absolute;
-		  top: 22px;
-		  width: 0;
-		  z-index: 1;
-		  left: 30px;
-		  border: medium solid #33015A;
-		  border-width: 10px 10px 10px 0;
-		  border-color: transparent #33015A transparent transparent;
-		}
+    /* Add arrows to the right container (pointing left) */
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 22px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid #33015A;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #33015A transparent transparent;
+    }
 
-		/* Fix the circle for containers on the right side */
-		.right::after {
-		  left: -16px;
-		}
+    /* Fix the circle for containers on the right side */
+    .right::after {
+        left: -16px;
+    }
 
-		/* The actual content */
-		.content {
-		  padding: 20px 30px;
-		  position: relative;
-		  border-radius: 6px;
-		}
+    /* The actual content */
+    .content {
+        padding: 20px 30px;
+        position: relative;
+        border-radius: 6px;
+    }
 
-		/* Media queries - Responsive timeline on screens less than 600px wide */
-		@media screen and (max-width: 600px) {
-		  /* Place the timelime to the left */
-		  .timeline::after {
-		  left: 31px;
-		  }
-		  
-		  /* Full-width containers */
-		  .wadah {
-		  width: 100%;
-		  padding-left: 70px;
-		  padding-right: 25px;
-		  }
-		  
-		  /* Make sure that all arrows are pointing leftwards */
-		  .wadah::before {
-		  left: 60px;
-		  border: medium solid #33015A;
-		  border-width: 10px 10px 10px 0;
-		  border-color: transparent #33015A transparent transparent;
-		  }
+    /* Media queries - Responsive timeline on screens less than 600px wide */
+    @media screen and (max-width: 600px) {
+        /* Place the timelime to the left */
+        .timeline::after {
+        left: 31px;
+        }
+        
+        /* Full-width containers */
+        .wadah {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+        }
+        
+        /* Make sure that all arrows are pointing leftwards */
+        .wadah::before {
+        left: 60px;
+        border: medium solid #33015A;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent #33015A transparent transparent;
+        }
 
-		  /* Make sure all circles are at the same spot */
-		  .left::after, .right::after {
-		  left: 15px;
-		  }
-		  
-		  /* Make all right containers behave like the left ones */
-		  .right {
-		  left: 0%;
-		  }
-		}
+        /* Make sure all circles are at the same spot */
+        .left::after, .right::after {
+        left: 15px;
+        }
+        
+        /* Make all right containers behave like the left ones */
+        .right {
+        left: 0%;
+        }
+        .videowrapper { 
+            float: none; 
+            clear: both; 
+            width: 100%; 
+            position: relative; 
+            padding-bottom: 56.25%; 
+            padding-top: 25px; 
+            height: 0; 
+        } 
+        .videowrapper iframe { 
+            position: absolute; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+        }
+    }
 </style>
 <!-- ##### Hero Area Start ##### -->
-<div class="mb-0 jumbotron d-flex justify-content-center align-items-center">
+{{-- <p class="mt-3 lead text-capitalize">Untuk Menuju Sekolah Yang Baik</p> --}}
+{{-- <div class="mb-0 jumbotron d-flex justify-content-center align-items-center">
     <div class="p-3 rounded shadow-sm bg-white-50">
         <div class="p-4 text-center border card">
-            <h1 class="display-5 font-weight-bold">SMP 5 HANGTUA</h1>
+            <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
             <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
-            {{-- <p class="mt-3 lead text-capitalize">Untuk Menuju Sekolah Yang Baik</p> --}}
             <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
         </div>
     </div>
-</div>
+</div> --}}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        @foreach ($banner as $bnr)
+            <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->iteration }}" class={{ ($loop->iteration == 1) ? "active" : ""; }}></li>  
+        @endforeach
+        {{-- <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="7"></li> --}}
+    </ol>
+    <div class="carousel-inner">
+        @foreach ($banner as $bnr)
+            <div data-slide="{{ $loop->iteration }}" class='{{ ($loop->iteration == 1) ? "carousel-item active" : "carousel-item"; }}'>
+                <img src="{{ asset('img/bg/'.$bnr->img) }}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <div class="p-3 rounded shadow-sm bg-white-50">
+                        <div class="p-4 text-center border card">
+                            <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                            <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                            <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        @endforeach
+        {{-- <div class="carousel-item">
+            <img src="{{ asset('img/bg/bg3.jpg') }}" class="d-block w-100" alt="..." style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="p-3 rounded shadow-sm bg-white-50">
+                    <div class="p-4 text-center border card">
+                        <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                        <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                        <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('img/bg/bg4.jpg') }}" class="d-block w-100" alt="..."  style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="p-3 rounded shadow-sm bg-white-50">
+                    <div class="p-4 text-center border card">
+                        <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                        <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                        <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('img/bg/bg5.jpg') }}" class="d-block w-100" alt="..."  style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="p-3 rounded shadow-sm bg-white-50">
+                    <div class="p-4 text-center border card">
+                        <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                        <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                        <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('img/bg/bg6.jpg') }}" class="d-block w-100" alt="..."  style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="p-3 rounded shadow-sm bg-white-50">
+                    <div class="p-4 text-center border card">
+                        <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                        <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                        <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('img/bg/bg7.jpg') }}" class="d-block w-100" alt="..."  style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="p-3 rounded shadow-sm bg-white-50">
+                    <div class="p-4 text-center border card">
+                        <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                        <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                        <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img src="{{ asset('img/bg/bg8.jpg') }}" class="d-block w-100" alt="..."  style="background-image: url(img/bg-img/bg1.jpg);">
+            <div class="carousel-caption d-none d-md-block">
+                <div class="p-3 rounded shadow-sm bg-white-50">
+                    <div class="p-4 text-center border card">
+                        <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+                        <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+                        <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
+                    </div>
+                </div>
+            </div>
+        </div> --}}
+    </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+        </a>
+    </div>
 <!-- ##### Hero Area End ##### -->
 
 {{-- Info Campaign --}}
@@ -234,17 +360,17 @@
     <div class="container py-5">
         <div class="row">
             <div class="text-center col-lg-12">
-                <h2 class="mb-4 fa-3x">Agenda</h2>
+                <h2 class="mb-4 fa-3x">ARTIKEL</h2>
                 <h3 class="mb-3 font-weight-normal">
                     Jika Anda dapat bergabung dengan kami sekarang, <br>
                     maka semakin banyak yang terbantu
                 </h3>
             </div>
 
-            @for ($i = 0; $i < 6; $i++) <div class="col-lg-4 col-md-6">
+            @foreach ($artikel as $art)
+                <div class="col-lg-4 col-md-6">
                 <div class="mt-4 card">
-                    <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22286%22%20height%3D%22180%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20286%20180%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_17affada31b%20text%20%7B%20fill%3Argba(255%2C255%2C255%2C.75)%3Bfont-weight%3Anormal%3Bfont-family%3AHelvetica%2C%20monospace%3Bfont-size%3A14pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_17affada31b%22%3E%3Crect%20width%3D%22286%22%20height%3D%22180%22%20fill%3D%22%23777%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22107.1953125%22%20y%3D%2295.5265625%22%3E286x180%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
-                        class="card-img-top" alt="...">
+                    <img src="{{ asset('uploads/img/artikel/'.$art->thumbnail) }}" style="height: 200px" class="card-img-top" alt="">
                     <div class="p-2 card-body">
                         <div class="d-flex justify-content-between text-dark">
                             {{-- <p class="mb-0">Terkumpul: <strong>1jt</strong></p>
@@ -252,19 +378,25 @@
                         </div>
                     </div>
                     <div class="p-2 card-body border-top">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque iure iste
-                            dolorum eius perspiciatis suscipit in veniam sed consectetur eos.</p>
+                        <h5 class="card-title">{!! Str::substr($art->judul, 0, 33) !!} ...</h5>
+                        <p class="card-text">{{ date('d / m / Y', strtotime($art->created_at)) }}</p>
                     </div>
                     <div class="p-2 card-footer bg-light">
-                        <a href="" class="rounded btn btn-primary d-block">
+                        <a href="{{ url('artikel/'.$art->slug) }}" class="rounded btn btn-primary d-block">
                             <i class="mr-2 fas fa-eye"></i>
                             lihat Sekarang
                         </a>
                     </div>
                 </div>
+            </div>
+            @endforeach
         </div>
-        @endfor
+        <br>
+        <div class="row text-center">
+            <div class="col align-self-center">
+                <a href="{{ url('artikel') }}" class="btn btn-outline-primary">Lihat Selengkapnya</a>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -355,55 +487,55 @@
         <hr>
     </div>
     <div class="timeline">
-      <div class="wadah left">
-        <div class="content" style="background-color: #F78320; color: #FFFFFF">
-          <i class="fas fa-city fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>1. Pembangunan Data Center</b></h5>
-          <p>Pembangunan ruang data center (dimana nantinya akan menjadi pusat data seluruh SKPD/unit di Kabupaten) yang sesuai memenuhi syarat, seperti diletakkan pada lokasi yang tidak rawan bencana dan dibangun berdasarkan standar tier yang ada, dsb.</p>
+        <div class="wadah left">
+            <div class="content" style="background-color: #F78320; color: #FFFFFF">
+            <i class="fas fa-city fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>1. Pembangunan Data Center</b></h5>
+            <p>Pembangunan ruang data center (dimana nantinya akan menjadi pusat data seluruh SKPD/unit di Kabupaten) yang sesuai memenuhi syarat, seperti diletakkan pada lokasi yang tidak rawan bencana dan dibangun berdasarkan standar tier yang ada, dsb.</p>
+            </div>
         </div>
-      </div>
-      <div class="wadah right">
-        <div class="content" style="background-color: #42B745; color: #FFFFFF">
-          <i class="fas fa-desktop fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>2. Pengadaan Perangkat Aktif pada Data Center</b></h5>
-          <p>Pengadaan perangkat aktif yang dibutuhkan untuk mendukung pengadaan data center, seperti server, switch, router, pc personal, dsb.</p>
+        <div class="wadah right">
+            <div class="content" style="background-color: #42B745; color: #FFFFFF">
+            <i class="fas fa-desktop fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>2. Pengadaan Perangkat Aktif pada Data Center</b></h5>
+            <p>Pengadaan perangkat aktif yang dibutuhkan untuk mendukung pengadaan data center, seperti server, switch, router, pc personal, dsb.</p>
+            </div>
         </div>
-      </div>
-      <div class="wadah left">
-        <div class="content" style="background-color: #008DD1; color: #FFFFFF">
-          <i class="fas fa-network-wired fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>3. Pembangunan Jaringan FO SKPD, Kec, Desa</b></h5>
-          <p>Pembangunan infrastruktur jaringan Fiber Optik untuk menghubungkan SKPD- SKPD yang ada dengan Data Center untuk sentralisasi TIK dan data.</p>
+        <div class="wadah left">
+            <div class="content" style="background-color: #008DD1; color: #FFFFFF">
+            <i class="fas fa-network-wired fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>3. Pembangunan Jaringan FO SKPD, Kec, Desa</b></h5>
+            <p>Pembangunan infrastruktur jaringan Fiber Optik untuk menghubungkan SKPD- SKPD yang ada dengan Data Center untuk sentralisasi TIK dan data.</p>
+            </div>
         </div>
-      </div>
-      <div class="wadah right">
-        <div class="content" style="background-color: #F54C8F; color: #FFFFFF">
-          <i class="fas fa-users fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>4. Pembangunan Command Center</b></h5>
-          <p>Pembangunan command center sebagai pusat control yang akan terintegrasi dengan Aplikasi dan Dashboard pemerintahan.</p>
+        <div class="wadah right">
+            <div class="content" style="background-color: #F54C8F; color: #FFFFFF">
+            <i class="fas fa-users fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>4. Pembangunan Command Center</b></h5>
+            <p>Pembangunan command center sebagai pusat control yang akan terintegrasi dengan Aplikasi dan Dashboard pemerintahan.</p>
+            </div>
         </div>
-      </div>
-      <div class="wadah left">
-        <div class="content" style="background-color: #AA66B1; color: #FFFFFF">
-          <i class="fas fa-columns fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>5. Inventarisasi Aplikasi & Pembuatan Dashboard Aplikasi Internal</b></h5>
-          <p>Penginventarisasian aplikasi yang sudah ada atau perlu diadakan baik pada PEMKAB  dan SKPD/unit yang ada pada  Kabupaten yang perlu diintegrasikan dengan Data Center. Pembuatan dashboard untuk big data aplikasi internal yang sudah berjalan atau running pada Data Center untuk memudahkan decision maker dalam proses monitoring dan pengambilan keputusan.</p>
+        <div class="wadah left">
+            <div class="content" style="background-color: #AA66B1; color: #FFFFFF">
+            <i class="fas fa-columns fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>5. Inventarisasi Aplikasi & Pembuatan Dashboard Aplikasi Internal</b></h5>
+            <p>Penginventarisasian aplikasi yang sudah ada atau perlu diadakan baik pada PEMKAB  dan SKPD/unit yang ada pada  Kabupaten yang perlu diintegrasikan dengan Data Center. Pembuatan dashboard untuk big data aplikasi internal yang sudah berjalan atau running pada Data Center untuk memudahkan decision maker dalam proses monitoring dan pengambilan keputusan.</p>
+            </div>
         </div>
-      </div>
-      <div class="wadah right">
-        <div class="content" style="background-color: #FE2826; color: #FFFFFF;">
-          <i class="fas fa-photo-video fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>6. Pembuatan Dashboard Media Eksternal</b></h5>
-          <p>Pembuatan dashboard untuk big data media eksternal terkait performansi Pemerintah Kabupaten beserta SKPD/unitnya (seperti opini yang beredar pada media sosial facebook atau twitter terkait performansi kinerja Pemerintah Kabupaten) untuk memudahkan decision maker dalam proses monitoring dan pengambilan keputusan.</p>
+        <div class="wadah right">
+            <div class="content" style="background-color: #FE2826; color: #FFFFFF;">
+            <i class="fas fa-photo-video fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>6. Pembuatan Dashboard Media Eksternal</b></h5>
+            <p>Pembuatan dashboard untuk big data media eksternal terkait performansi Pemerintah Kabupaten beserta SKPD/unitnya (seperti opini yang beredar pada media sosial facebook atau twitter terkait performansi kinerja Pemerintah Kabupaten) untuk memudahkan decision maker dalam proses monitoring dan pengambilan keputusan.</p>
+            </div>
         </div>
-      </div>
-      <div class="wadah left">
-        <div class="content" style="background-color: #2297A1; color: #FFFFFF">
-          <i class="fas fa-mobile-alt fa-2x" style="margin-bottom: 10px;"></i>
-          <h5><b>7. Pembuatan Mobile Application</b></h5>
-          <p>Pembuatan aplikasi mobile disesuaikan dengan kebutuhan Pemerintah Kabupaten guna memudahkan decision maker untuk memantau kinerja terkait performansi Pemerintah Kabupaten (misal : pembuatan aplikasi mobile untuk dashboard big data aplikasi internal).</p>
+        <div class="wadah left">
+            <div class="content" style="background-color: #2297A1; color: #FFFFFF">
+            <i class="fas fa-mobile-alt fa-2x" style="margin-bottom: 10px;"></i>
+            <h5><b>7. Pembuatan Mobile Application</b></h5>
+            <p>Pembuatan aplikasi mobile disesuaikan dengan kebutuhan Pemerintah Kabupaten guna memudahkan decision maker untuk memantau kinerja terkait performansi Pemerintah Kabupaten (misal : pembuatan aplikasi mobile untuk dashboard big data aplikasi internal).</p>
+            </div>
         </div>
-      </div>
     </div>
 </div>
 </div>
@@ -412,12 +544,14 @@
     <div class="container py-5">
         <div class="row">
             <div class="text-center col-lg-12">
-                <h2 class="mb-4 fa-3x">SMP 5 HANGTUAH SIDOARJO</h2>
+                <h2 class="mb-4 fa-3x">SMP 6 HANGTUAH SIDOARJO</h2>
                 {{-- <h3 class="mb-4 font-weight-normal">
                     Selamat Datang di Website SMP HANG TUAH 5 CANDI SIDOARJO. Terima Kasih Kunjungannya <br>
                     Terima Kasih Kunjungannya
                 </h3> --}}
-                <iframe width="660" height="350" src="https://www.youtube.com/embed/Nu6AQaDI7U4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="videowrapper">
+                    <iframe width="660" height="350" src="https://www.youtube.com/embed/Nu6AQaDI7U4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
                 <br>
                 <a href="https://www.youtube.com/channel/UCqSOncP3AH1ly53vc1uS4nQ" class="m-auto rounded btn btn-primary btn-lg"><i class="mr-2 fab fa-youtube"></i>Youtube</a>
             </div>

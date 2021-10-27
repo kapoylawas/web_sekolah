@@ -71,6 +71,22 @@
             </p>
           </a>
         </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.gambar.index') }}" class="nav-link {{ Request::segment(2) == 'gambar' ? 'active' : '' }}">
+            <i class="fas fa-photo-video"></i>
+            <p>
+              Gambar Utama
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.galeri.index') }}" class="nav-link {{ Request::segment(2) == 'galeri' ? 'active' : '' }}">
+            <i class="fas fa-camera"></i>
+            <p>
+              Galeri
+            </p>
+          </a>
+        </li>
 
         <li class="nav-header">PENGATURAN</li>
         <li class="nav-item">

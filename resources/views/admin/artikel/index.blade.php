@@ -26,13 +26,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                @php 
-                    $no=1;
-                @endphp
-
                 @foreach($artikel as $art)
                 <tr>
-                  <td>{{ $no++ }}</td>
+                  <td>{{ $loop->iteration }}</td>
                   <td>{{ $art->judul }}</td>
                   <td>{{ $art->user->name }}</td>
                   <td>{{ $art->kategoriArtikel->nama_kategori }}</td>

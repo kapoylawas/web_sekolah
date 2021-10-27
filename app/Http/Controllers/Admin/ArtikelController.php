@@ -53,6 +53,7 @@ class ArtikelController extends Controller
      */
     public function store(Request $request)
     {
+        // dd($request->all());
         Artikel::create([
             'judul' => $request->judul,
             'deskripsi' => $this->summernoteService->imageUpload('artikel'),
@@ -99,7 +100,7 @@ class ArtikelController extends Controller
     {
         $this->authorize('update',$artikel);
 
-        Artikel::create([
+        Artikel::where('id',$artikel->id)->update([
             'judul' => $request->judul,
             'deskripsi' => $this->summernoteService->imageUpload('artikel'),
             'thumbnail' => $this->uploadService->imageUpload('artikel'),
@@ -107,7 +108,7 @@ class ArtikelController extends Controller
             'user_id' => auth()->user()->id,
             'kategori_artikel_id' => $request->kategori_artikel_id,
         ]);
-           
+
         return redirect()->route('admin.artikel.index')->with('success','Data berhasil diupdate');
     }
 
