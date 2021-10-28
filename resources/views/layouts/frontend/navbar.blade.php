@@ -320,7 +320,7 @@
                 <nav class="classy-navbar justify-content-between" id="cleverNav">
 
                     <!-- Logo -->
-                    <a class="nav-brand" href="index.html"><img src="{{ asset('/img/icons/smp.jpeg') }}" alt=""></a>
+                    <a class="nav-brand" href="{{ url('/') }}"><img src="{{ asset('/img/icons/smp.jpeg') }}" alt=""></a>
 
                     <!-- Navbar Toggler -->
                     <div class="classy-navbar-toggler">
