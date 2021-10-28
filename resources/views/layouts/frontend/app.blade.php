@@ -220,10 +220,10 @@
     </div>
 
     <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
+    {{-- <header class="header-area"> --}}
 
         <!-- Top Header Area -->
-        <div class="py-2 text-white header bg-primary">
+        {{-- <div class="py-2 text-white header bg-primary">
             <div class="container">
                 <div class="row d-flex align-items-center">
                     <div class="col-lg-3 social">
@@ -252,11 +252,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
         <!-- Navbar Area -->
         @include('layouts.frontend.navbar')
-    </header>
+    {{-- </header> --}}
     <!-- ##### Header Area End ##### -->
 
     @yield('content')

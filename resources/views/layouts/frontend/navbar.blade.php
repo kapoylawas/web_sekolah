@@ -25,6 +25,29 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
+        <style>
+        .nav-brand img {
+            width: 60px;
+        }
+        .left::before {
+            content: " ";
+            height: 0;
+            position: absolute;
+            top: 22px;
+            width: 0;
+            z-index: 1;
+            right: 30px;
+            /* border: medium solid #33015A; */
+            border-width: 10px 0 10px 10px;
+            /* border-color: transparent transparent transparent #33015A; */
+        }
+        @media only screen and (max-width: 768px) {
+            img.card-img-top.img-responsive {
+                margin: 5px;
+            }
+        }
+        </style>
+
     {{-- <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -229,7 +252,7 @@
 
 
     {{-- Navbar --}}
-    <nav class="bg-white navbar navbar-expand-sm sticky-top navbar-light border-bottom" style="top: -1px;">
+    {{-- <nav class="bg-white navbar navbar-expand-sm sticky-top navbar-light border-bottom" style="top: -1px;">
         <div class="container">
             <a class="navbar-brand" href="{{ url('/') }}">
                 <img src="{{ asset('/img/icons/smp.jpeg') }}" alt="" class="navbar-brand img">
@@ -251,7 +274,97 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </nav> --}}
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+
+        <!-- Top Header Area -->
+        <div class="py-2 text-white header bg-primary">
+            <div class="container">
+                <div class="row d-flex align-items-center">
+                    <div class="col-lg-3 social">
+                        <a href="" class="text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="" class="ml-4 text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="" class="ml-4 text-white"><i class="fab fa-google"></i></a>
+                        <a href="" class="ml-4 text-white"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                    <div class="text-center col-lg-7 office-info">
+                        <a href="" class="text-white text-decoration-none">
+                            <i class="fas fa-phone-alt"></i>
+                            <span class="ml-1">0813-0394-2343</span>
+                        </a>
+                        <a href="" class="ml-3 text-white text-decoration-none">
+                            <i class="far fa-clock"></i>
+                            <span class="ml-1">Senin - Jum'at, 08:00 s/d 16:00</span>
+                        </a>
+                        <a href="" class="ml-3 text-white text-decoration-none">
+                            <i class="fa fa-envelope"></i>
+                            <span class="ml-1">info@smpht5sidoarjo.sch.id</span>
+                        </a>
+                    </div>
+                    <div class="col-ml-5 action" style="white-space: nowrap;">
+                        <a href="{{ url('/ppdb') }}" class="py-0 btn btn-sm btn-light rounded-0">PPDB</a>
+                        <a href="{{ url('/login') }}" class="py-0 btn btn-sm btn-light rounded-0">Admin</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navbar Area -->
+        <div class="clever-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <!-- Menu -->
+                <nav class="classy-navbar justify-content-between" id="cleverNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="index.html"><img src="{{ asset('/img/icons/smp.jpeg') }}" alt=""></a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+
+                        <!-- Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul>
+                                <li><a class="nav-link @if(request()->is('/')) active @endif" href="{{ url('/') }}">Home</a></li>
+                                <li><a class="nav-link @if(request()->is('contact')) active @endif" href="{{ url('/contact') }}">Kontak</a></li>
+                                <li><a class="nav-link @if(request()->is('artikel')) active @endif" href="{{ url('/artikel') }}">Artikel</a></li>
+                                <li><a class="nav-link @if(request()->is('about')) active @endif" href="{{ url('/about') }}">Tentang Kami</a></li>
+                            </ul>
+
+                            <!-- Search Button -->
+                            <div class="search-area">
+                                {{-- <form action="#" method="post">
+                                    <input type="search" name="search" id="search" placeholder="Search">
+                                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                </form> --}}
+                            </div>
+
+                            <!-- Register / Login -->
+                            {{-- <div class="register-login-area">
+                                <a href="#" class="btn">Register</a>
+                                <a href="index-login.html" class="btn active">Login</a>
+                            </div> --}}
+
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
 
 
     

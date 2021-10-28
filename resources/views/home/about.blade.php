@@ -25,9 +25,12 @@
                 <div class="page-content">
                     <h4 class="text-center">Galery</h4>
                     <div class="container">
-                        <div class="row row-cols-4">
+                        {{-- <div class="row row-cols-4"> --}}
+                        <div class="row">
                             @foreach ($galeri as $gl)
-                                <div class="col"><img src="{{ asset('img/galeri/'.$gl->img) }}" style="height: 200px" class="card-img-top" alt=""></div>
+                                <div class="col-lg-3 col-sm-12">
+                                    <img src="{{ asset('img/galeri/'.$gl->img) }}" style="height: 200px" class="card-img-top img-responsive" alt="">
+                                </div>
                             @endforeach
                         </div>
                         <br>

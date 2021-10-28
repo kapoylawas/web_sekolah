@@ -117,9 +117,9 @@
         width: 0;
         z-index: 1;
         right: 30px;
-        border: medium solid #33015A;
+        border: medium solid;
         border-width: 10px 0 10px 10px;
-        border-color: transparent transparent transparent #33015A;
+        border-color: transparent transparent transparent;
     }
 
     /* Add arrows to the right container (pointing left) */
