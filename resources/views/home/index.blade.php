@@ -195,6 +195,9 @@
             width: 100%; 
             height: 100%; 
         }
+        .d-none {
+            display: block!important;
+        }
     }
 </style>
 <!-- ##### Hero Area Start ##### -->
@@ -227,7 +230,7 @@
                 <img src="{{ asset('img/bg/'.$bnr->img) }}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
                     <div class="p-3 rounded shadow-sm bg-white-50">
-                        <div class="p-4 text-center border card">
+                        <div class="p-4 text-center border card card-ppdb">
                             <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
                             <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
                             <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
