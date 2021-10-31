@@ -73,7 +73,7 @@
         </li>
         <li class="nav-item">
           <a href="{{ route('admin.gambar.index') }}" class="nav-link {{ Request::segment(2) == 'gambar' ? 'active' : '' }}">
-            <i class="fas fa-photo-video"></i>
+            <i class="nav-icon fas fa-photo-video"></i>
             <p>
               Gambar Utama
             </p>
@@ -81,9 +81,25 @@
         </li>
         <li class="nav-item">
           <a href="{{ route('admin.galeri.index') }}" class="nav-link {{ Request::segment(2) == 'galeri' ? 'active' : '' }}">
-            <i class="fas fa-camera"></i>
+            <i class="nav-icon fas fa-camera"></i>
             <p>
               Galeri
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.guru.index') }}" class="nav-link {{ Request::segment(2) == 'guru' ? 'active' : '' }}">
+            <i class="nav-icon fa fa-user"></i>
+            <p>
+              Profil Guru
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{ route('admin.jabatan.index') }}" class="nav-link {{ Request::segment(2) == 'jabatan' ? 'active' : '' }}">
+            <i class="nav-icon fas fa-medal"></i>
+            <p>
+              Jabatan
             </p>
           </a>
         </li>

@@ -1,7 +1,8 @@
 @extends('layouts.frontend.app',[
     'title' => 'Home',
 ])
-@push('css')
+@section('content')
+
 <style>
     /* Jumbotron */
     .jumbotron {
@@ -197,85 +198,42 @@
         .d-none {
             display: block!important;
         }
+    }
 
-        /* Banner */
-        #banner {
-            position: relative;
-            background-image: linear-gradient(to right, #1ea6ec, #2c92fb);
-            color: #fff;
-            padding-top: 5%;
+    @media screen and (max-width: 768px) {
+        .pendaftaran h1{
+            font-size: larger;
+            text-align: center;
         }
-        .title-ban {
-            font-weight: bolder;
-            margin-top: 80px;
+        .pendaftaran h2{
+            font-size: larger;
+            text-align: center;
         }
-        .row-banner{
-            /* height: 100%; */
+        .pendaftaran p{
+            font-size: medium;
+            text-align: center;
+        }
+        .img-slider {
+            height: 300px;
         }
         .pendaftaran {
-            
+            text-align: center;
+            text-align: center;
         }
     }
 </style>
-@endpush
-@section('content')
-
-<section id="banner">
-    <div class="banner" style="padding-bottom: 0;">
-        <div class="container">
-            <div class="row row-banner">
-                <div class="col-md-6">
-                    <!-- ##### Hero Area Start ##### -->
-                    {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            @foreach ($banner as $bnr)
-                                <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->iteration }}" class={{ ($loop->iteration == 1) ? "active" : ""; }}></li>  
-                            @endforeach
-                        </ol>
-                        <div class="carousel-inner">
-                            @foreach ($banner as $bnr)
-                                <div data-slide="{{ $loop->iteration }}" class='{{ ($loop->iteration == 1) ? "carousel-item active" : "carousel-item"; }}'>
-                                    <img style="height: 380px" src="{{ asset('img/bg/'.$bnr->img) }}" class="d-block w-100 img-slider" alt="...">
-                                </div>
-                            @endforeach
-                        </div>
-                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                            </a>
-                    </div> --}}
-                    <!-- ##### Hero Area End ##### -->
-                    <div class="pendaftaran">
-                        <h1 class="title-ban">SMP HANGTUAH 6</h1>
-                        <h2>Be Wise, Be Smart, Be Excellence</h2>
-                        <p style="color: white;font-weight: bolder; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Telah Dibuka Pendaftaran Siswa Baru Tahun Ajaran 2021-2022</p>
-                        <a class="btn btn-warning" style="color: white" href="#">Daftar Sekarang</a>
-                    </div>
-                </div>
-
-                <div class="col-md-6">
-                    <img src="{{ asset('templates/banner-frontend/img/learning.png') }}" class="ban-img img-fluid" alt=""
-                        style="position: relative;z-index: 100;"
-                    >
-                </div>
-            </div>
+<!-- ##### Hero Area Start ##### -->
+{{-- <p class="mt-3 lead text-capitalize">Untuk Menuju Sekolah Yang Baik</p> --}}
+{{-- <div class="mb-0 jumbotron d-flex justify-content-center align-items-center">
+    <div class="p-3 rounded shadow-sm bg-white-50">
+        <div class="p-4 text-center border card">
+            <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
+            <p class="mt-3 lead text-capitalize-bold">SIDOARJO</p>
+            <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
         </div>
     </div>
-
-    <svg class="wafe" xmlns="{{ asset('templates/banner-frontend/img/wave.svg') }}" viewBox="0 0 1440 320"><path fill="#fff" fill-opacity="1" 
-        d="M0,160L48,149.3C96,139,192,117,288,133.3C384,149,480,203,576,218.7C672,235,768,213,864,
-        218.7C960,224,1056,256,1152,266.7C1248,277,1344,267,1392,261.3L1440,256L1440,320L1392,320C1344,
-        320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,
-        320,96,320,48,320L0,320Z"
-        style="position: absolute; bottom: 0%; left: 0;"></path>
-    </svg> <!-- xmlns="http://www.w3.org/2000/svg" -->
-</section>
-<!-- ##### Hero Area Start ##### -->
-{{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+</div> --}}
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="position: relative;">
     <ol class="carousel-indicators">
         @foreach ($banner as $bnr)
             <li data-target="#carouselExampleIndicators" data-slide-to="{{ $loop->iteration }}" class={{ ($loop->iteration == 1) ? "active" : ""; }}></li>  
@@ -284,8 +242,8 @@
     <div class="carousel-inner">
         @foreach ($banner as $bnr)
             <div data-slide="{{ $loop->iteration }}" class='{{ ($loop->iteration == 1) ? "carousel-item active" : "carousel-item"; }}'>
-                <img src="{{ asset('img/bg/'.$bnr->img) }}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
+                <img src="{{ asset('img/bg/'.$bnr->img) }}" class="d-block w-100 img-slider" alt="...">
+                {{-- <div class="carousel-caption d-none d-md-block">
                     <div class="p-3 rounded shadow-sm bg-white-50">
                         <div class="p-4 text-center border card card-ppdb">
                             <h1 class="display-5 font-weight-bold">SMP 6 HANGTUAH</h1>
@@ -293,9 +251,15 @@
                             <a href="{{ url('/ppdb') }}" class="m-auto rounded btn btn-primary btn-lg w-50">Info PPDB</a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         @endforeach
+        <div class="pendaftaran" style="position: relative; top:-55%; z-index:100; padding:10px;">
+            <h1 class="title-ban" style="font-weight: bolder;margin-top: 80px;color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">SMP HANGTUAH 6</h1>
+            <h2 style="color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Be Wise, Be Smart, Be Excellence</h2>
+            <p style="color: white;font-weight: bolder; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Telah Dibuka Pendaftaran Siswa Baru Tahun Ajaran 2021-2022</p>
+            <a class="btn btn-warning btn-daftar" style="color: white" href="#">Daftar Sekarang</a>
+        </div>
     </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -305,7 +269,7 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
         </a>
-</div> --}}
+</div>
 <!-- ##### Hero Area End ##### -->
 
 {{-- Info Campaign --}}

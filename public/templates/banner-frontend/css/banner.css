@@ -1,0 +1,53 @@
+/* Banner */
+#banner {
+    position: relative;
+    background-image: linear-gradient(to right, #1ea6ec, #2c92fb);
+    color: #fff;
+    padding-top: 2%;
+}
+
+.title-ban {
+    font-weight: bolder;
+    margin-top: 80px;
+}
+
+.row-banner {
+    height: 250px;
+}
+
+#banner {
+    position: relative;
+    background-image: linear-gradient(to right, #1ea6ec, #007bff);
+    color: #fff;
+    padding-top: 2%;
+}
+
+.pendaftaran {
+    position: relative;
+    z-index:100;
+    padding:10px;
+}
+
+.pendaftaran h1 {
+    font-weight: bolder;
+    margin-top: 80px;
+    color: coral;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+.pendaftaran h2 {
+    color: coral;
+    text-shadow: -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+
+@media only screen and (max-width: 810px) {
+    .row-banner {
+        height: 100%;
+    }
+}

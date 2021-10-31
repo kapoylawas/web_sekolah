@@ -8,6 +8,7 @@ use App\Models\Agenda;
 use App\Models\Artikel;
 use App\Models\Banner;
 use App\Models\Galeri;
+use App\Models\Guru;
 use App\Models\Pengumuman;
 
 class HomeController extends Controller
@@ -26,6 +27,12 @@ class HomeController extends Controller
     {
         $data['galeri'] = Galeri::paginate(4);
         return view('home.about',$data);
+    }
+    
+    public function aboutGuru()
+    {
+        $data['guru'] = Guru::paginate(8);
+        return view('home.aboutGuru',$data);
     }
 
     public function contact()

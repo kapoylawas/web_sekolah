@@ -210,6 +210,7 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="{{ asset('templates/frontend/clever') }}/style.css">
+    <link rel="stylesheet" href="{{ asset('templates/banner-frontend/css/') }}/banner.css">
     {{-- @stack('css') --}}
 </head>
 

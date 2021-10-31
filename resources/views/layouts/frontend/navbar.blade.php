@@ -41,10 +41,19 @@
             border-width: 10px 0 10px 10px;
             /* border-color: transparent transparent transparent #33015A; */
         }
+        .classy-navbar {
+            justify-content: flex-start;
+        }
         @media only screen and (max-width: 768px) {
             img.card-img-top.img-responsive {
                 margin: 5px;
             }
+            .classy-navbar {
+                justify-content: space-between;
+            }
+        }
+        .nav-link.active {
+            color: #007bff !important;
         }
         </style>
 
@@ -304,8 +313,8 @@
                         </a>
                     </div>
                     <div class="col-ml-5 action" style="white-space: nowrap;">
-                        <a href="{{ url('/ppdb') }}" class="btn btn-light btn-sm">PPDB</a>
-                        <a href="{{ url('/login') }}" class="btn btn-light btn-sm">Admin</a>
+                        {{-- <a href="{{ url('/ppdb') }}" class="btn btn-light btn-sm">PPDB</a>
+                        <a href="{{ url('/login') }}" class="btn btn-light btn-sm">Admin</a> --}}
                         {{-- <a href="{{ url('/ppdb') }}" class="py-0 btn btn-sm btn-light rounded-0">PPDB</a>
                         <a href="{{ url('/login') }}" class="py-0 btn btn-sm btn-light rounded-0">Admin</a> --}}
                     </div>
@@ -317,7 +326,7 @@
         <div class="clever-main-menu">
             <div class="classy-nav-container breakpoint-off">
                 <!-- Menu -->
-                <nav class="classy-navbar justify-content-between" id="cleverNav">
+                <nav class="classy-navbar" id="cleverNav">
 
                     <!-- Logo -->
                     <a class="nav-brand" href="{{ url('/') }}"><img src="{{ asset('/img/icons/smp.jpeg') }}" alt=""></a>
@@ -328,7 +337,8 @@
                     </div>
 
                     <!-- Menu -->
-                    <div class="classy-menu">
+                    {{-- <div class="classy-menu" style="width: 60%"> --}}
+                    <div class="classy-menu" style="margin: auto;">
 
                         <!-- Close Button -->
                         <div class="classycloseIcon">
@@ -336,21 +346,28 @@
                         </div>
 
                         <!-- Nav Start -->
+                        {{-- <div class="classynav" style="margin-left:40% !important;"> --}}
                         <div class="classynav">
                             <ul>
                                 <li><a class="nav-link @if(request()->is('/')) active @endif" href="{{ url('/') }}">Home</a></li>
                                 <li><a class="nav-link @if(request()->is('contact')) active @endif" href="{{ url('/contact') }}">Kontak</a></li>
                                 <li><a class="nav-link @if(request()->is('artikel')) active @endif" href="{{ url('/artikel') }}">Artikel</a></li>
-                                <li><a class="nav-link @if(request()->is('about')) active @endif" href="{{ url('/about') }}">Tentang Kami</a></li>
+                                <li><a class="nav-link @if(request()->is('ppdb')) active @endif" href="{{ url('/ppdb') }}">PPDB</a></li>
+                                <li><a class="nav-link @if(request()->is('about')) active @endif" href="#">Tentang Kami</a>
+                                    <ul class="dropdown">
+                                        <li><a href="{{ url('/about') }}">Profil Sekolah</a></li>
+                                        <li><a href="{{ url('/about/about-guru') }}">Profil Guru</a></li>
+                                    </ul>
+                                </li>
                             </ul>
 
                             <!-- Search Button -->
-                            <div class="search-area">
-                                {{-- <form action="#" method="post">
+                            {{-- <div class="search-area">
+                                <form action="#" method="post">
                                     <input type="search" name="search" id="search" placeholder="Search">
                                     <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                </form> --}}
-                            </div>
+                                </form>
+                            </div> --}}
 
                             <!-- Register / Login -->
                             {{-- <div class="register-login-area">

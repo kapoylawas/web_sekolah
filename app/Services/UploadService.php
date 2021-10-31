@@ -22,4 +22,12 @@ class UploadService
 
 		return $filename;
 	}
+	public function fotoGuru($path)
+	{
+		$file = request()->file('foto');
+		$filename = $file->getClientOriginalName();
+		$file->move(public_path('foto/guru/'.$path),$filename);
+
+		return $filename;
+	}
 }

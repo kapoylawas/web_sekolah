@@ -31,6 +31,7 @@ use App\Http\Controllers\PpdbController;
 Route::get('/',[HomeController::class,'index']);
 Route::get('/home',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
+Route::get('/about/about-guru',[HomeController::class,'aboutGuru'])->name('about-guru');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 
 //Artikel
@@ -62,5 +63,7 @@ Route::group(['namespace' => 'Admin','prefix' => 'admin','middleware' => ['auth'
 		Route::resource('kategori-artikel','KategoriArtikelController');
 		Route::resource('gambar','GambarUtamaController');
 		Route::resource('galeri','GaleriController');
+		Route::resource('guru','GuruController');
+		Route::resource('jabatan','JabatanController');
 	});
 });

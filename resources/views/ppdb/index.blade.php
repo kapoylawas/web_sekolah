@@ -183,14 +183,22 @@
         }
     }
 </style>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Google Fonts -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
 
 <!-- Peta Jalan -->
 <div class="container" style="padding-top: 5rem; padding-bottom: 4rem;">
-    <div align="center" style="padding-bottom: 4rem;">
-        <h2 style="color: #33015A"><b>Informasi PPDB</b> SMP HANGTUA 5 SIDOARJO</h2>
+    <div align="center" style="padding-bottom: 1rem;">
+        <h2 style="color: #33015A"><b>INFORMASI PPDB</b> SMP HANGTUAH 6 SIDOARJO</h2>
         <hr>
     </div>
-    <div class="timeline">
+    {{-- <div class="timeline">
         <div class="wadah left">
             <div class="content" style="background-color: #F78320; color: #FFFFFF">
                 <i class="fas fa-city fa-2x" style="margin-bottom: 10px;"></i>
@@ -205,7 +213,102 @@
                 <p>PLaraschool adalah Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse</p>
             </div>
         </div>
+    </div> --}}
+    <!-- Vertical Steppers -->
+    <div class="row">
+        <div class="col-md-12">
+
+            <!-- Stepers Wrapper -->
+            <ul class="stepper stepper-vertical">
+
+            <!-- First Step -->
+            <li class="completed">
+                <a href="#!">
+                <span class="circle">1</span>
+                <span class="label">First step</span>
+                </a>
+
+                <!-- Section Description -->
+                <div class="step-content grey lighten-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cupiditate voluptate facere
+                    iusto
+                    quaerat
+                    vitae excepturi, accusantium ut aliquam repellat atque nesciunt nostrum similique. Inventore
+                    nostrum
+                    ut,
+                    nobis porro sapiente.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error excepturi veniam nemo
+                    repellendus, distinctio soluta vitae at sit saepe. Optio eaque quia excepturi adipisci pariatur
+                    totam,
+                    atque odit fugiat.</p>
+                <p>Deserunt voluptatem illum quae nisi soluta eum perferendis nesciunt asperiores tempore saepe
+                    reiciendis,
+                    vero quod a dolor corporis natus qui magni quas fuga rem excepturi laboriosam. Quisquam
+                    expedita ab
+                    fugiat.</p>
+                </div>
+            </li>
+
+            <!-- Second Step -->
+            <li class="active">
+
+                <!--Section Title -->
+                <a href="#!">
+                <span class="circle">2</span>
+                <span class="label">Second step</span>
+                </a>
+
+                <!-- Section Description -->
+                <div class="step-content grey lighten-3">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse cupiditate voluptate facere
+                    iusto
+                    quaerat
+                    vitae excepturi, accusantium ut aliquam repellat atque nesciunt nostrum similique. Inventore
+                    nostrum
+                    ut,
+                    nobis porro sapiente.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore error excepturi veniam nemo
+                    repellendus, distinctio soluta vitae at sit saepe. Optio eaque quia excepturi adipisci pariatur
+                    totam,
+                    atque odit fugiat.</p>
+                <p>Deserunt voluptatem illum quae nisi soluta eum perferendis nesciunt asperiores tempore saepe
+                    reiciendis,
+                    vero quod a dolor corporis natus qui magni quas fuga rem excepturi laboriosam. Quisquam
+                    expedita ab
+                    fugiat.</p>
+                </div>
+            </li>
+
+            <!-- Third Step -->
+            <li class="warning">
+                <a href="#!">
+                <span class="circle"><i class="fas fa-exclamation"></i></span>
+                <span class="label">Third step</span>
+                </a>
+            </li>
+
+            <!-- Fourth Step -->
+            <li>
+                <a href="#!">
+                <span class="circle">4</span>
+                <span class="label">Fourth step</span>
+                </a>
+            </li>
+
+            </ul>
+            <!-- /.Stepers Wrapper -->
+
+        </div>
     </div>
+
+    <!-- Steppers Navigation -->
+    {{-- <div class="row mt-1">
+    <div class="col-md-12 text-right">
+        <button class="btn btn-flat btn-sm">Cancel</button>
+        <button class="btn btn-primary btn-sm">Next</button>
+    </div>
+    </div> --}}
+    <!-- /.Vertical Steppers -->
 </div>
 </div>
 
