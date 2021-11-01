@@ -201,25 +201,42 @@
     }
 
     @media screen and (max-width: 768px) {
-        .pendaftaran h1{
+        .pendaftaranx h1{
             font-size: larger;
             text-align: center;
         }
-        .pendaftaran h2{
+        .pendaftaranx h2{
             font-size: larger;
             text-align: center;
         }
-        .pendaftaran p{
+        .pendaftaranx p{
             font-size: medium;
             text-align: center;
         }
         .img-slider {
             height: 300px;
         }
-        .pendaftaran {
+        .pendaftaranx {
             text-align: center;
             text-align: center;
         }
+    }
+
+    .pendaftaranx h1{
+        font-weight: bolder;
+        margin-top: 80px;
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-size: 70px;
+    }
+    .pendaftaranx h2{
+        color: white;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+        font-size: 60px;
+    }
+    .pendaftaranx p{
+        color: white;
+        font-size: 30px;
     }
 </style>
 <!-- ##### Hero Area Start ##### -->
@@ -254,11 +271,11 @@
                 </div> --}}
             </div>
         @endforeach
-        <div class="pendaftaran" style="position: relative; top:-55%; z-index:100; padding:10px;">
-            <h1 class="title-ban" style="font-weight: bolder;margin-top: 80px;color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">SMP HANGTUAH 6</h1>
-            <h2 style="color: white;text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Be Wise, Be Smart, Be Excellence</h2>
+        <div class="pendaftaranx" style="position: relative; top:-55%; z-index:100; padding:10px;">
+            <h1 class="title-ban">SMP HANGTUAH 6</h1>
+            <h2>Be Wise, Be Smart, Be Excellence</h2>
             <p style="color: white;font-weight: bolder; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;">Telah Dibuka Pendaftaran Siswa Baru Tahun Ajaran 2021-2022</p>
-            <a class="btn btn-warning btn-daftar" style="color: white" href="#">Daftar Sekarang</a>
+            <a class="btn btn-warning btn-daftar" href="#" style="color: white;">Daftar Sekarang</a>
         </div>
     </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
