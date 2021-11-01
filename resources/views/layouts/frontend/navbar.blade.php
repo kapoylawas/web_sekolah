@@ -353,7 +353,7 @@
                                 <li><a class="nav-link @if(request()->is('contact')) active @endif" href="{{ url('/contact') }}">Kontak</a></li>
                                 <li><a class="nav-link @if(request()->is('artikel')) active @endif" href="{{ url('/artikel') }}">Artikel</a></li>
                                 <li><a class="nav-link @if(request()->is('ppdb')) active @endif" href="{{ url('/ppdb') }}">PPDB</a></li>
-                                <li><a class="nav-link @if(request()->is('about')) active @endif" href="#">Tentang Kami</a>
+                                <li><a class="nav-link @if(request()->is('about') || request()->is('about/about-guru')) active @endif" href="#">Tentang Kami</a>
                                     <ul class="dropdown">
                                         <li><a href="{{ url('/about') }}">Profil Sekolah</a></li>
                                         <li><a href="{{ url('/about/about-guru') }}">Profil Guru</a></li>
